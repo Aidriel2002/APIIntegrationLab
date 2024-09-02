@@ -1,0 +1,316 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin-top: 30px;
+    background-color: rgb(29, 29, 29);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #252525;
+    align-items: center;
+    padding: 5px 20px;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+nav img {
+    height: 60px;
+}
+nav h1 {
+    color: rgb(247, 247, 247);
+    margin-left: 10px;
+}
+nav h1 span {
+    background-color: orange;
+    padding: 5px;
+    border-radius: 3px;
+    color: black;
+}
+.search {
+    display: flex;
+    padding-right: 50px;
+}
+#searchInput {
+    padding: 10px;
+    border-radius: 7px 0 0 7px;
+    border: none;
+}
+#searchInput:focus {
+    outline: none;
+}
+
+#searchBtn {
+    border-radius: 0 7px 7px 0;
+    padding: 10px;
+    border: none;
+    background-color: orange;
+}
+
+#searchBtn i {
+    margin: 0;
+}
+
+#searchBtn:hover {
+    background-color: rgb(221, 145, 3);
+    cursor: pointer;
+}
+
+.fetch.hidden {
+    display: none;
+}
+.fetch {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    height: 83vh;
+    
+}
+
+.fetch iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    object-fit: cover; 
+    transform: scale(2);
+    display: block; 
+    
+}
+
+#note {
+    position: relative;
+    z-index: 1;
+    color: orange;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+#fetchUsersBtn {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 7px;
+    background-color: orange;   
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+#fetchUsersBtn:hover {
+    background-color: rgb(184, 121, 3);
+}
+
+
+#userContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.user-card {
+    padding: 16px;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}   
+
+.user-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.user-card h3 {
+    margin: 3px 0 8px 0;
+    font-size: 16px;
+    text-align: left;
+    color: white;
+}
+
+#searchInput, #searchBtn, #roleFilterContainer, #allRolesBtn {
+    display: none; 
+}
+
+
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+
+.role-button, .allRolesBtn {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #222222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.role-button:hover {
+    background-color: #272727;
+}
+
+.role-button.active {
+    background-color: orange;
+    color: #000;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    transition: opacity 0.3s ease;
+}
+
+
+.modal-content {
+    background: #252525;
+    border-radius: 10px;
+    padding: 0 20px ;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: orangered;
+}
+
+
+#modalImage{
+    width: 450px; 
+    height: auto; 
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+#modalName{
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+#modalRole,#modalSpecialty {
+    font-size: 1em;
+    color: orange;
+    margin-bottom: 7px;
+
+}
+
+#modalSpecialty {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+footer {
+    background-color: #252525;
+    color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social .social-icon {
+    color: #f1f1f1;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}

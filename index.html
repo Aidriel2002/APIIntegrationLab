@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Filter</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+ 
+        <nav>
+            <div class="logo">
+            <img src="./images/logo.png" alt="Logo">
+            <h1>Mobile Legends <span> Bang Bang</span></h1>
+        </div>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search by name">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+
+        <div class="filter">
+            <button id="allRolesBtn" class="role-button">All Roles</button>
+            <div id="roleFilterContainer">
+            </div>
+        </div>
+
+        <div id="userContainer">
+        </div>
+
+        <div class="fetch">
+            <iframe id="videoIframe" src="https://www.youtube.com/embed/hobpDrungfc?autoplay=1&mute=1" title="Legends Arise | Cinematic Trailer of Rise of Necrokeep - Project NEXT | Mobile Legends: Bang Bang" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p id="note">Fetch Heroes to display the MLBB heroes</p>
+            <button id="fetchUsersBtn">Fetch Heroes</button>
+        </div>
+        
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="modalName"></h3>
+                <img id="modalImage" src="" alt="Hero Image">
+
+                <p id="modalRole"></p>
+                <p id="modalSpecialty"></p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Logo">
+                    <p>Mobile Legends Bang Bang</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/aidrieeel" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@justsingit_ph/video/7310550405971217669?q=kung%20ako%20nalang%20sana&t=1725284372383" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/aidrieeel/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtu.be/xVWeRnStdSA" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Aidrieeel. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
