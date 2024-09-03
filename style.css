@@ -105,7 +105,7 @@ nav h1 span {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-#fetchUsersBtn {
+#fetchHeroesBtn,.fetU {
     padding: 20px 40px;
     border: none;
     border-radius: 7px;
@@ -119,11 +119,18 @@ nav h1 span {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-#fetchUsersBtn:hover {
+#fetchHeroesBtn:hover {
     background-color: rgb(184, 121, 3);
 }
-
-
+.fetU:hover {
+    background-color: rgb(184, 121, 3);
+}
+#usersContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
 #userContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

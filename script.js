@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fetchUsersBtn = document.getElementById('fetchUsersBtn');
+    const fetchHeroesBtn = document.getElementById('fetchHeroesBtn');
     const searchBtn = document.getElementById('searchBtn');
     const allRolesBtn = document.getElementById('allRolesBtn');
     const userContainer = document.getElementById('userContainer');
@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const note = document.getElementById('note');
     const videoIframe = document.getElementById('videoIframe');
     const fetchContainer = document.querySelector('.fetch');
-
-    // Modal Elements
     const userModal = document.getElementById('userModal');
     const modalImage = document.getElementById('modalImage');
     const modalName = document.getElementById('modalName');
@@ -36,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     searchBtn.style.display = 'block';
                     roleFilterContainer.style.display = 'block';
                     allRolesBtn.style.display = 'block';
+                    fetchHeroesBtn.style.display = 'none';
                     fetchUsersBtn.style.display = 'none';
                     note.style.display = 'none';
                     videoIframe.style.display = 'none';
-                    fetchContainer.classList.add('hidden'); // Hide fetch container
+                    fetchContainer.classList.add('hidden'); 
                     filterUsers();
                 } else {
                     throw new Error('Unexpected data format');
@@ -126,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userModal.style.display = 'none';
     }
 
-    fetchUsersBtn.addEventListener('click', fetchUsers);
+    fetchHeroesBtn.addEventListener('click', fetchUsers);
     searchBtn.addEventListener('click', filterUsers);
     searchInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {

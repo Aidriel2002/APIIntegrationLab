@@ -12,9 +12,10 @@
  
         <nav>
             <div class="logo">
-            <img src="./images/logo.png" alt="Logo">
-            <h1>Mobile Legends <span> Bang Bang</span></h1>
-        </div>
+                <img src="./images/logo.png" alt="Logo">
+                <h1>Mobile Legends <span> Bang Bang</span></h1>
+            </div>
+           
             <div class="search">
                 <input type="text" id="searchInput" placeholder="Search by name">
                 <button id="searchBtn"><i class="fas fa-search"></i></button>
@@ -33,7 +34,10 @@
         <div class="fetch">
             <iframe id="videoIframe" src="https://www.youtube.com/embed/hobpDrungfc?autoplay=1&mute=1" title="Legends Arise | Cinematic Trailer of Rise of Necrokeep - Project NEXT | Mobile Legends: Bang Bang" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p id="note">Fetch Heroes to display the MLBB heroes</p>
-            <button id="fetchUsersBtn">Fetch Heroes</button>
+            <button id="fetchHeroesBtn">Fetch Heroes</button>
+            <p id="note">Fetch User to display the Users from API</p>
+            <button id="fetchUsersBtn"  class="fetU">Fetch Users</button>
+
         </div>
         
         <div id="userModal" class="modal">
@@ -41,12 +45,12 @@
                 <span class="close">&times;</span>
                 <h3 id="modalName"></h3>
                 <img id="modalImage" src="" alt="Hero Image">
-
                 <p id="modalRole"></p>
                 <p id="modalSpecialty"></p>
             </div>
         </div>
-        
+        <div id="usersContainer">
+        </div>
         <footer>
             <div class="footer-content">
                 <div class="footer-logo">
@@ -66,6 +70,7 @@
         </footer>
 
         <script src="script.js"></script>
+        <script src="user.js"></script>
 
     </body>
 </html>
